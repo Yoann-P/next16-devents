@@ -3,7 +3,7 @@ import Image from "next/image";
 
 interface Props {
     title: string;
-    image: string;
+    image?: string;
     slug: string;
     location: string;
     date: string;
@@ -25,7 +25,9 @@ const EventCard = (
             href={`/events/${slug}`}
             id={"event-card"}
         >
-            <Image src={image} alt={title} width={410} height={300} className={"poster "}/>
+            {image ? (
+                <Image src={image} alt={title} width={410} height={300} className={"poster "}/>
+            ) : null}
 
             <div className="flex flex-row gap-2 ">
                 <Image src={"/icons/pin.svg"} alt={"location"} width={14} height={14}/>
