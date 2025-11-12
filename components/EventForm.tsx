@@ -112,7 +112,7 @@ export default function EventForm() {
     return (
         <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} id="book-event">
-                {/* ... tous tes champs existants ... */}
+
                 <FormField
                     control={form.control}
                     name="title"
